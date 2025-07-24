@@ -1,0 +1,13 @@
+apiVersion: image.openshift.io/v1alpha1
+kind: ImageSetConfiguration
+mirror:
+  additionalImages:
+  - name: quay.io/opstree/redis-exporter:v1.44.0
+  - name: quay.io/opstree/redis:v7.0.5
+  - name: quay.io/opstree/redis-sentinel:v7.0.7
+  - name: container-registry.oracle.com/mysql/community-ndb-operator@sha256:344636c37fb423672a8c0e6de527e13e4e552556809911d07ecc096dcf1fd9c2
+  - name: container-registry.oracle.com/mysql/community-cluster@sha256:f1fee4a741bb95aff607ebb7832f6930c6cd3ed0088919c3c5161ba74296ca86
+  - name: prom/mysqld-exporter:v0.15.1
+  - name: quay.io/opstree/zookeeper:3.6.1
+  - name: quay.io/mongodb/mongodb-enterprise-operator-ubi@sha256:6d394a5247cc346c4421bd9b37948c0378970dd3f4fc5d6eaac681f4c9655957
+

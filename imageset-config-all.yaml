@@ -1,0 +1,66 @@
+apiVersion: mirror.openshift.io/v2alpha1
+kind: ImageSetConfiguration
+mirror:
+  operators:
+  - catalog: quay.io/operatorhubio/catalog:latest
+    packages:
+    - name: redis-operator
+      channels:
+      - name: stable
+    - name: mongodb-operator
+      channels:
+      - name: alpha
+    - name: ndb-operator
+      channels:
+      - name: alpha
+    - name: mariadb-operator 
+      channels:
+      - name: alpha
+    - name: nuxeo-operator
+      channels:
+      - name: stable
+    - name: grafana-operator
+      channels:
+      - name: v5
+  operators:
+  - catalog: registry.redhat.io/redhat/community-operator-index:v4.14
+    packages:
+    - name: postgresql
+      channels:
+      - name: v5
+    - name: mongodb-atlas-kubernetes
+      channels:
+      - name: stable
+      minVersion: 2.9.1
+      maxVersion: 2.9.1
+    - name: wandb
+      channels:
+      - name: stable
+      minVersion: 1.0.0
+      maxVersion: 1.0.0
+  - catalog: registry.redhat.io/redhat/certified-operator-index:v4.14
+    packages:
+    - name: elasticsearch-eck-operator-certified
+      channels:
+      - name: stable
+      minVersion: 2.16.1
+      maxVersion: 2.16.1
+    - name: redis-enterprise-operator-certified
+      channels:
+      - name: production
+    - name: mongodb-enterprise
+      channels:
+      - name: stable
+      minVersion: 1.33.0
+      maxVersion: 1.33.0
+    - name: mongodb-kubernetes
+      channels:
+      - name: stable
+      minVersion: 1.2.0
+      maxVersion: 1.2.0
+    - name: mongodb-atlas-kubernetes
+      channels:
+      - name: stable
+      minVersion: 2.8.0
+      maxVersion: 2.8.0
+    

@@ -1,0 +1,17 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ygs-community-catalog
+  namespace: openshift-marketplace
+  labels:
+    marketplace.openshift.io/catalog: "true"
+spec:
+  displayName: "Ygs Community Operators"
+  publisher: "ygs"
+  sourceType: grpc
+  image: registry.ygs.quay:8443/init/redhat/community-operator-index:v4.14
+  updateStrategy:
+    registryPoll:
+      interval: 10m
+  secrets:
+  - ygs-pull-secret
