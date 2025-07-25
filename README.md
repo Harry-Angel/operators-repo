@@ -6,7 +6,10 @@ registry for operators
 ## install
 1. extract tar files // mirror-worksapce.tar
 
-  cat mirror-workspace.tar.gz.part-* | tar -xzv
+  //  cat mirror-workspace.tar.gz.part-* | tar -xzv
+  // cat mirror-workspace-images.tar.gz.part-* | tar -xzv
+  7z a -tzip -v50m mirror-workspace.zip mirror-workspace
+  7z x mirror-workspace.zip
 
 2. push operators set
 
