@@ -18,7 +18,7 @@ registry for operators
   ** replace url of registry
   
 3. apply catalog to openshift
-
+  // oc create secret docker-registry ygs-pull-secret  --docker-server=registry.ygs.quay:8443 --docker-username=init  --docker-password=welcomeInit123. -n openshift-marketplace
   oc apply -f ygs-community-catalogsource.yaml
   oc apply -f ygs-community-catalogsource-cert.yaml
 
